@@ -20,8 +20,8 @@
     <script src="js/jquery.min.js"></script>  
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/require.js"></script>
-  	<script type='text/javascript' src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
-	<script src="js/visualizeHelper.js"></script>
+  	<!--<script type='text/javascript' src="http://localhost:8089/jasperserver-pro/client/visualize.js?_opt=false"></script>
+	<script src="js/visualizeHelper.js"></script> -->
 	<script type='text/javascript' src="js/healthy-choices.js"></script>
     
   </head>
@@ -90,15 +90,15 @@
                       </div>
 				  <img src="img/seasonal-legend/seasonal-title.jpg" width="100%" height="100" alt="Seasonal" class="img-responsive"/> 
            
-                  <img src="img/seasonal-legend/high-off.jpg" width="40%" height="100" style="float:left" alt="High" class="img-responsive" onmouseover="this.src='img/seasonal-legend/high-on2.jpg';" onmouseout="this.src='img/seasonal-legend/high-off.jpg';" onClick="passControls('SupplyTime', 1);"/>
+                  <img class="seasonalLegend_reset" data-value-filter="1" src="img/seasonal-legend/high-off.jpg" width="40%" height="100" style="float:left" alt="High" class="img-responsive" onmouseover="this.src='img/seasonal-legend/high-on2.jpg';" onmouseout="this.src='img/seasonal-legend/high-off.jpg';" />
                   
-                  <img src="img/seasonal-legend/good-off.jpg" width="40%" height="100" alt="Good" class="img-responsive" onmouseover="this.src='img/seasonal-legend/good-on2.jpg';" onmouseout="this.src='img/seasonal-legend/good-off.jpg';" onClick="passControls('SupplyTime', 2);"/>
+                  <img class="seasonalLegend" data-value-filter="2" src="img/seasonal-legend/good-off.jpg" width="40%" height="100" alt="Good" class="img-responsive" onmouseover="this.src='img/seasonal-legend/good-on2.jpg';" onmouseout="this.src='img/seasonal-legend/good-off.jpg';" />
                   
-                  <img src="img/seasonal-legend/limited-off.jpg" width="40%" height="100" style="float:left" alt="Limited" class="img-responsive" onmouseover="this.src='img/seasonal-legend/limited-on2.jpg';" onmouseout="this.src='img/seasonal-legend/limited-off.jpg';" onClick="passControls('SupplyTime', 3);"/>
+                  <img class="seasonalLegend" data-value-filter="3" src="img/seasonal-legend/limited-off.jpg" width="40%" height="100" style="float:left" alt="Limited" class="img-responsive" onmouseover="this.src='img/seasonal-legend/limited-on2.jpg';" onmouseout="this.src='img/seasonal-legend/limited-off.jpg';" />
                   
-                  <img src="img/seasonal-legend/none-off.jpg" width="40%" height="100" alt="None" class="img-responsive" onmouseover="this.src='img/seasonal-legend/none-on2.jpg';" onmouseout="this.src='img/seasonal-legend/none-off.jpg';" onClick="passControls('SupplyTime', 4);"/>
+                  <img class="seasonalLegend" data-value-filter="4" src="img/seasonal-legend/none-off.jpg" width="40%" height="100" alt="None" class="img-responsive" onmouseover="this.src='img/seasonal-legend/none-on2.jpg';" onmouseout="this.src='img/seasonal-legend/none-off.jpg';" />
                   
-                  <img src="img/seasonal-legend/all-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/seasonal-legend/all-on.jpg';" onmouseout="this.src='img/seasonal-legend/all-off.jpg';" onClick="resetControls('SupplyTime');"/>
+                  <img class="seasonalLegend_reset" src="img/seasonal-legend/all-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/seasonal-legend/all-on.jpg';" onmouseout="this.src='img/seasonal-legend/all-off.jpg';"/>
                   
                   
                 </div>

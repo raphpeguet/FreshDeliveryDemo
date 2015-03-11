@@ -20,8 +20,8 @@
   <script src="js/jquery.min.js"></script>  
   <script src="js/bootstrap.min.js"></script>
   <script src="js/require.js"></script>
-  <script type='text/javascript' src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
-  <script src="js/visualizeHelper.js"></script>
+  <!--<script type='text/javascript' src="http://localhost:8089/jasperserver-pro/client/visualize.js?_opt=false"></script>
+  <script src="js/visualizeHelper.js"></script>-->
   <script type='text/javascript' src="js/brand-control.js"></script>
 
   </head>
@@ -92,9 +92,9 @@
                   	  			<p class="lead">You can also see the top ten products on any brand by selecting below.</p>
                       		</div>
                             
-                            <img src="img/top-ten-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/top-ten-on.jpg';" onmouseout="this.src='img/top-ten-off.jpg';" onClick="topTen();"/>
+                            <img class="showTopTen" src="img/top-ten-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/top-ten-on.jpg';" onmouseout="this.src='img/top-ten-off.jpg';"/>
                   
-                   		   <img src="img/all-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/all-on.jpg';" onmouseout="this.src='img/all-off.jpg';" onClick="resetControls();"/>
+                   		   <img class="resetControls" src="img/all-off.jpg" width="100%" height="100" alt="All" class="img-responsive" onmouseover="this.src='img/all-on.jpg';" onmouseout="this.src='img/all-off.jpg';"/>
 					  
                     </div>
                 
