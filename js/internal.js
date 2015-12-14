@@ -2,6 +2,7 @@
 		var loggedInUser;
         var usersObject = {"users": [
             {"userName":"jasperadmin", "password":"jasperadmin", "roles":"Ext_User", "orgId":"organization_1", "expireTime":"blue", "region":"East", "level":"1"},
+            {"userName":"joeuser", "password":"joeuser", "roles":"Ext_User", "orgId":"organization_1", "expireTime":"blue", "region":"East", "level":"1"},
             {"userName":"CaliforniaUser", "password":"CaliforniaUser", "roles":"Ext_User", "orgId":"organization_1", "expireTime":"blue", "region":"West", "level":"2"},
             {"userName":"Sue", "password":"password", "roles":"Ext_Mgr", "orgId":"organization_1", "expireTime":"blue", "region":"North", "level":"3"},
             {"userName":"Beth", "password":"password", "roles":"Ext_Mgr", "orgId":"organization_1", "expireTime":"blue", "region":"South", "level":"4"},
@@ -127,8 +128,8 @@
 	var pw = document.myform.pword.value;
 	var valid = false;
 
-	var unArray = ["jasperadmin", "CaliforniaUser", "User3"];  // as many as you like - no comma after final entry
-	var pwArray = ["jasperadmin", "CaliforniaUser", "Pass3"];  // the corresponding passwords;
+	var unArray = ["joeuser", "jasperadmin", "CaliforniaUser", "User3"];  // as many as you like - no comma after final entry
+	var pwArray = ["joeuser", "jasperadmin", "CaliforniaUser", "Pass3"];  // the corresponding passwords;
 
 	for (var i=0; i <unArray.length; i++) {
 	if ((un == unArray[i]) && (pw == pwArray[i])) {

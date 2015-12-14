@@ -31,8 +31,8 @@
  Full Example:
  myConfig = {
      auth: {
-         name: "jasperadmin",
-         password: "jasperadmin",
+         name: "joeuser",
+         password: "joeuser",
          organization:"organization_1",
          locale: "en",
          timezone: "Europe/Helsinki"
@@ -41,8 +41,8 @@
  */
 jrsConfig =  {
     auth: {
-        name: "jasperadmin",
-        password: "jasperadmin",
+        name: "joeuser",
+        password: "joeuser",
         organization: "organization_1"
     }
 };
