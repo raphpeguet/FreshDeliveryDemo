@@ -1,0 +1,187 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acme Fresh Delivery Foods</title>
+    <meta name="description" content="Welcome to Acme Fresh Foods">
+    <meta name="author" content="Jaspersoft">
+	<link rel="shortcut icon" href="favicon.ico">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- Google Font Arvo -->
+    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/acme2.css" rel="stylesheet"> 
+
+	<!-- Core JavaScript
+	================================================== -->
+	<script src="js/jquery.min.js"></script>  
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/require.js"></script>
+	<script type='text/javascript' src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+	<script src="js/visualizeHelper.js"></script>
+	    <script src="js/init-login.js"></script>
+    <script src="js/history.js"></script>
+
+
+	<script type="text/JavaScript">
+		var jsHelper = new ContextPageJS();
+		jsHelper.init(window);
+    </script>
+	
+
+	<style type="text/css">
+		#ButtonsTable table 
+		{
+		table-layout:fixed;
+		border :0;
+		width:180px; 
+		}
+
+		#ButtonsTable td
+		{
+		width:64px; 
+		padding : 2px;
+		}
+		
+
+	    #repo h3 {
+	        padding: 5px 0;
+	        margin: 0;
+	    }
+	    #repo table {
+	        border-collapse: collapse;
+	    }
+	    #repo td {
+	        border: solid 1px #eee;
+	        padding: 4px 0;
+	    }
+	    .fill { top:20; right:0; bottom:0; left:20}
+	    #overlay { background: #333; opacity: 0.33}
+	    #ajax-icon { width:64px; height: 64px; margin:auto; color: #fff; text-align: center}
+	    .mygrid-wrapper-div {
+		    overflow: scroll;
+		    height: 400px;
+			}
+		.row {
+			margin-right: 0px;
+			margin-left: 0px;
+		}
+	</style>
+	
+
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="acme-container">
+          <!-- header -->
+          <header>
+            <div class="masthead clearfix">
+              <div class="inner">
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+						<li><a href="top-sellers.html">Top Sellers</a></li>
+						<li><a href="go-green.html">Go Green</a></li>
+						 <li><a href="history.html">Purchase History</a></li>
+						<li><a href="our-data.html">Dashboards</a></li>
+                      </ul>
+                      
+                    </div>
+                    <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+                </nav>
+              </div>
+            </div>
+          </header>
+          <!-- history content -->
+          <a name="history"  ></a>
+          <article class="healthy-choices interior-article">
+            <div class="container-fluid">
+                <div class="row">
+					<div class="col-md-2 col-lg-2 col-xl-2 aux-col admin-sidebar">
+						<img src="img/admin-logo.jpg" width="100%" height="250" alt="Healthy Choices" class="img-responsive" />
+						<div class="col-text">
+							<h3>Purchase History</h3><br>Filter by product types
+							<div class="row">
+								<div class="btn-toolbar" role="toolbar">
+								<table id="ButtonsTable"><tr><td>
+									<button type="buttonAll" class="btn btn-success btn-large green-btn-custom green-inline-dropdown" onclick="jsHelper.passControls('ProductFamily','');">All</button>
+								</td><td>	
+									<button type="buttonDrinks" class="btn btn-success btn-large green-btn-custom green-inline-dropdown" onclick="jsHelper.passControls('ProductFamily','Drink');">Drinks</button>
+								</td></tr>
+								<tr><td>	
+									<button type="buttonFood" class="btn btn-success btn-large green-btn-custom green-inline-dropdown" onclick="jsHelper.passControls('ProductFamily','Food');">Food</button>
+								</td><td>
+									<button type="buttonFood" class="btn btn-success btn-large green-btn-custom green-inline-dropdown" onclick="jsHelper.passControls('ProductFamily','Non-Consumable');">Others</button>
+								</td></tr></table>
+								</div>
+							</div>
+					
+							<br><br>Export	
+											
+						</div>	
+						<table id="ButtonsTable"><tr><td>
+							<button id="buttonPDF" onclick ="makeExport('pdf')" style="float:center" class="btn btn-success btn-large green-btn-custom green-inline-dropdown">PDF</button>
+						</td><td>
+							<button id="buttonXLSX" onclick ="makeExport('xlsx')" style="float:center" class="btn btn-success btn-large green-btn-custom green-inline-dropdown">Excel</button>
+						</td></tr>
+						<tr><td>
+							<button id="buttonDOCX" onclick ="makeExport('docx')" style="float:center" class="btn btn-success btn-large green-btn-custom green-inline-dropdown">Word</button>
+						</td><td>
+							<button id="buttonPPTX" onclick ="makeExport('pptx')" style="float:center" class="btn btn-success btn-large green-btn-custom green-inline-dropdown">Powerpoint</button>
+						</td></tr></table>	
+					
+					
+					</div> 
+					<div style="background-color:#FFF" class="col-md-10 main-col main-col-interior">
+						<div id="container" style="background-color:#FFF">
+						
+						<!-- adding navigation bar for the report -->
+						<!-- Pages --> 		
+						<div class="row">
+							<div class="main-report">
+								 <ul class="pager">
+									<li class="previous"><a href="#" id="previousPage">&larr; Previous</a></li>
+									<li>Page <span id="current">1</span> of  <span id="total"></span></li>
+									<li class="next"><a href="#" id="nextPage">Next &rarr;</a></li>
+								</ul>
+								<div id="report1" class="fill" align="center"></div>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+			</div>
+
+          </article>
+          
+		  <footer>
+			<div class="mastfoot">
+			  <div class="inner">
+			  <p>&copy; Acme Fresh Delivery Foods: a demonstration website for <a href="http://jaspersoft.com" target="_blank">TIBCO Analytics</a>.</p>
+			  </div>
+			</div>
+		  </footer>      
+        </div>
+      </div>
+    </div>
+    

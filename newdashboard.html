@@ -1,0 +1,104 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acme Fresh Delivery Foods</title>
+    <meta name="description" content="Welcome to Acme Fresh Foods">
+    <meta name="author" content="Jaspersoft">
+	<link rel="shortcut icon" href="favicon.ico">
+    <!-- Latest compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <!-- Google Font Arvo -->
+    <link href='css/fonts.css' rel='stylesheet' type='text/css'>
+    <!-- Custom styles for this template -->
+    <link href="css/acme.css" rel="stylesheet"> 
+
+	<!-- Core JavaScript
+	================================================== -->
+	<script src="js/jquery.min.js"></script>  
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/require.js"></script>
+	<script type='text/javascript' src="http://localhost:8080/jasperserver-pro/client/visualize.js"></script>
+	<script src="js/visualizeHelper.js"></script>
+	
+	<script src="js/newdashboard.js"></script>
+
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="acme-container">
+          <!-- header -->
+          <header>
+            <div class="masthead clearfix">
+              <div class="inner">
+                <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+ 						<li><a href="top-sellers.html">Top Sellers</a></li>
+						<li><a href="go-green.html">Go Green</a></li>
+						<li><a href="history.html">Purchase History</a></li>
+						<li><a href="our-data.html">Dashboards</a></li>
+                      </ul>
+                      
+                    </div>
+                    <!-- /.navbar-collapse -->
+                  </div>
+                  <!-- /.container-fluid -->
+                </nav>
+              </div>
+            </div>
+          </header>
+          <!-- heathy choices content -->
+          <a name="healthy-choices"  ></a>
+          <article class="healthy-choices interior-article">
+            <div class="container-fluid">
+                <div class="row">
+					<div class="col-md-2 col-lg-2 col-xl-2 aux-col admin-sidebar">
+						<img src="img/admin-logo.jpg" width="100%" height="250" alt="Healthy Choices" class="img-responsive" />
+						<div class="col-text">
+							<h3>Create a Dashboard</h3><br>Drag and drop items to create your dashboard
+						</div>
+						<br/><br/>
+						<div class="col-text">
+							<a href="our-data.html"><img src="img/ViewDashboard.png" onmouseover="this.src='img/ViewDashboard2.png';" onmouseout="this.src='img/ViewDashboard.png';" /></a>
+						</div>
+						<!-- visualize.js input control - dashboards 
+						<div class="input">
+							<select id="select" type='select' class='form-control'></select>
+						</div> -->
+					</div>
+					<div style="background-color:#FFF" class="col-md-10 main-col main-col-interior">
+						<!-- embed new dashboard -->
+						<div id="container" class="embed-responsive embed-responsive-4by3"></div>
+					</div>
+				</div>
+            </div>
+          </article>
+          
+		  <footer>
+			<div class="mastfoot">
+			  <div class="inner">
+			  <p>&copy;  Acme Fresh Delivery Foods: a demonstration website for <a href="http://jaspersoft.com" target="_blank">TIBCO Analytics</a>.</p>
+			  </div>
+			</div>
+		  </footer>      
+        </div>
+      </div>
+    </div>

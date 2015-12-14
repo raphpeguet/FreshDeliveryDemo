@@ -8,8 +8,8 @@ var un = document.myform.username.value;
 var pw = document.myform.pword.value;
 var valid = false;
 
-var unArray = ["jasperadmin", "CaliforniaUser", "User3"];  // as many as you like - no comma after final entry
-var pwArray = ["jasperadmin", "CaliforniaUser", "Pass3"];  // the corresponding passwords;
+var unArray = ["joeuser", "jasperadmin", "CaliforniaUser", "User3"];  // as many as you like - no comma after final entry
+var pwArray = ["joeuser", "jasperadmin", "CaliforniaUser", "Pass3"];  // the corresponding passwords;
 
 for (var i=0; i <unArray.length; i++) {
 if ((un == unArray[i]) && (pw == pwArray[i])) {
