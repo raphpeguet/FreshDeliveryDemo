@@ -1,4 +1,4 @@
-FreshDeliveryDemo - JRS 6.1
+FreshDeliveryDemo - JRS 6.2
 =================
 
 This is a demo site that embeds [JasperReports Server](http://www.jaspersoft.com/meet-new-jaspersoft) using the [Visualize.js](http://community.jaspersoft.com/project/visualizejs) framework
@@ -16,18 +16,18 @@ alt="Fresh Delivery Demo" width="240" height="180" border="10" /></a>
 
 ##Description
 The sample is designed to showcase the features of the Jaspersoft Visualize.js framework to embed BI in web applications. 
-It's used with a set of reports that are included in this sample that depend on the Foodmart Sample dataset that is provided in the standard trial installation of JasperServer Professional 6.1.
+It's used with a set of reports that are included in this sample that depend on the Foodmart Sample dataset that is provided in the standard trial installation of JasperServer Professional 6.2.
 
 Essentially this is a demo site (FreshDelivery) with a set of reports integrated within. It runs from a WebServer since it only uses HTML and Javascript so there is no specific requirements for the webserver.
 
 ##Install the Sample
 ###Requirements / Dependencies
-- A [JasperReports Server v6.1](http://www.jaspersoft.com/three-ways-test-drive-jaspersoft-bi-software) installed
+- A [JasperReports Server v6.2](http://www.jaspersoft.com/three-ways-test-drive-jaspersoft-bi-software) installed
 - A web server to host this sample. I use Apache HTTPD. You use whatever floats your boat.
 
 ### Installation Steps
 1. Unzip the release (or clone the repo) into your web server's web root. The instructions assume that this location is called 'FRESHDELIVERY_PATH'
-1. Import /JapserServerResources/FreshDelivery-Standard-6_1.zip to your JasperServer 6.1 Pro instance. [Check this link if you do not know how.](http://community.jaspersoft.com/documentation/jasperreports-server-administration-guide-beta/import-and-export-through-web-ui#import-export_2353750880_1044705) and if you like the command line go to your JRS buildomatic folder and just `./js-import.sh --input-zip FRESHDELIVERY_PATH/JasperServerResources/FreshDelivery-Standard-6_1.zip`
+1. Import /JapserServerResources/FreshDelivery-Standard-6_1.zip to your JasperServer 6.2 Pro instance. [Check this link if you do not know how.](http://community.jaspersoft.com/documentation/jasperreports-server-administration-guide-beta/import-and-export-through-web-ui#import-export_2353750880_1044705) and if you like the command line go to your JRS buildomatic folder and just `./js-import.sh --input-zip FRESHDELIVERY_PATH/JasperServerResources/FreshDelivery-Standard-6_2.zip`
 1. Modify your jasperreports.properties to allow JavaScript functions in the HTML5 Charting Library
 	1. Locate your jasperreports.properties in JasperReportsServer  `<tomcat-home>/webapps/jasperserver-pro/WEB-INF/classes/jasperreports.properties`
 	1. Add this line at the end of the file:  `com.jaspersoft.jasperreports.highcharts.function.properties.allowed=true`
