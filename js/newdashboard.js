@@ -34,7 +34,7 @@ visualize({
     console.log("Viz - login");    
     // Load the Repo seach by default..
     $('<iframe>', {
-       src: 'http://localhost:8080/jasperserver-pro/dashboard/designer.html?decorate=no',
+       src: 'http://localhost:8080/jasperserver-pro/dashboard/designer.html?decorate=no&theme=AcmeTheme',
        id:  'myFrame',
        // width: 1100,
        // height: 640,

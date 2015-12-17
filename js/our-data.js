@@ -61,7 +61,7 @@ visualize({
 	visualize = v;
 	
 	visualize.resourcesSearch({
-		folderUri:"/public",
+		folderUri:"/public/Public_Dasboards",
 		recursive:false,
 		types:["dashboard"],
 		success: listRepository,
@@ -70,7 +70,7 @@ visualize({
     
 	
     var dashboard = visualize.dashboard({
-        resource: "/public/2._Performance_Summary_Dashboard",
+        resource: "/public/Public_Dasboards/2._Performance_Summary_Dashboard",
         container: "#container",
         error: handleError
     });
