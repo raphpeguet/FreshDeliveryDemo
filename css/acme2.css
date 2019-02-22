@@ -32,7 +32,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Arvo';
+  font-family: 'Open Sans';
 }
 body {
   background-color: #365a35;
@@ -377,7 +377,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 /*
  * Aux Col Headlines and Features
  */
-.aux-col h2.lead { color:#FEFBE8; text-transform: uppercase; font-size:12px;font-weight: normal;font-family:helvetica,arial,sans-serif;
+.aux-col h2.lead { color:#FEFBE8; text-transform: uppercase; font-size:12px;font-weight: normal;font-family:Open Sans,sans-serif;
   text-shadow: 0 1px 3px rgba(0,0,0,.5); letter-spacing: 1px;text-align:center;margin-top:4px;margin-bottom:10px;}
   
 .aux-col p.lead { font-size:16px;}

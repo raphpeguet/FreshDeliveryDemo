@@ -75,6 +75,7 @@ function renderMapReportLink(uri, container, v) {
         return v.report({
             resource: uri,
             container: container,
+            scrollToTop: false,
             linkOptions: {
                 events: {
                     "click"  : function(evt, link){
@@ -92,6 +93,7 @@ function renderMapReportLink(uri, container, v) {
         	 return v.report({
             resource: uri,
             container: container,
+            scrollToTop: false,
             linkOptions: {
                 events: {
                     "click"  : function(evt, link){

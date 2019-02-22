@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
 
-@font-face {
+/*@font-face {
   font-family: 'Arvo';
   font-style: normal;
   font-weight: 400;
@@ -23,5 +23,21 @@
   font-family: 'Arvo';
   font-style: italic;
   font-weight: 700;
-  src: local('Arvo Bold Italic'), local('Arvo-BoldItalic'), url(fonts/Vj6JEk1YZr8j8R8H2j0b-rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+  src: local('Arvo Bold Italic'), local('Arvo-BoldItalic'), url(fonts/Vj6JEk1YZr8j8R8H2j0b-rO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');*/
+
+/*
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">*/
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), url("https://fonts.googleapis.com/css?family=Open+Sans:400") format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('Arvo-Bold'), url("https://fonts.googleapis.com/css?family=Open+Sans:700">) format('woff');
 }

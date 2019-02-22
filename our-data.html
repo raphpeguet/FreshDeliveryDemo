@@ -90,10 +90,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
-						<li><a href="top-sellers.html">Top Sellers</a></li>
-						<li><a href="go-green.html">Go Green</a></li>
-						<li><a href="history.html">Purchase History</a></li>
-						<li><a href="our-data.html">Dashboards</a></li>
+            						<li><a href="top-sellers.html">Top Sellers</a></li>
+            						<li><a href="go-green.html">Go Green</a></li>
+            						<li><a href="history.html">Purchase History</a></li>
+            						<li><a href="our-data.html">Dashboards</a></li>
                       </ul>
  					<!-- Link to login interface -->
                 		<form class="navbar-form navbar-right" role="search">
@@ -115,7 +115,15 @@
                 <div class="row">
 					<div class="col-md-2 col-lg-2 col-xl-2 aux-col admin-sidebar">
 						<img src="img/admin-logo.jpg" width="100%" height="250" alt="Healthy Choices" class="img-responsive" />
-						<div class="col-text">
+<!-- 						
+            <div class="input">
+              <select id="ICselect" type='select' class='form-control'>
+                <option value="volvo">Drink</option>
+                <option value="saab">Food</option>
+                <option value="mercedes">Non-Consumable</option>
+              </select>
+            </div> -->
+            <div class="col-text">
 							<h3>Select a Dashboard</h3><br>
 						</div>
 						<!-- visualize.js input control - dashboards -->
@@ -129,7 +137,16 @@
 					</div>
 					<div style="background-color:#FFF" class="col-md-10 main-col main-col-interior">
 						<!-- visualize.js embedded dashboard -->
-						<div id="container"></div>
+            <!-- 
+						<div id="tabs" style="background-color:#668138">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Menu 1</a></li>
+              </ul>
+            </div> -->
+            <div id="container">
+              <img class="default_dashboard" src="http://localhost:8080/FreshDeliveryDemo/img/default_dashboard.jpg">
+            </div>
 					</div>
 				</div>
             </div>

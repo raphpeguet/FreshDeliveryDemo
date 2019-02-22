@@ -46,6 +46,17 @@ function listRepository(results) {
 		});
 	});
 	$("#select option:eq(0)").prop("selected", true).change(); // To select via index
+
+	// $("#ICselect").change(function() {
+	// 	visualize.dashboard({
+	// 			resource: this.value,
+	// 			container: "#container",
+	// 			params: {
+ //                    product_family_1: $.value
+ //                },
+	// 			error: handleError
+	// 	});
+	// });
 }
 
 var visualize;
@@ -61,19 +72,12 @@ visualize({
 	visualize = v;
 	
 	visualize.resourcesSearch({
-		folderUri:"/public/Public_Dasboards",
+		folderUri:"/public/Public_Dashboards",
 		recursive:false,
 		types:["dashboard"],
 		success: listRepository,
 		error: handleError
 	});
-    
-	
-    var dashboard = visualize.dashboard({
-        resource: "/public/Public_Dasboards/2._Performance_Summary_Dashboard",
-        container: "#container",
-        error: handleError
-    });
 	
 });
 

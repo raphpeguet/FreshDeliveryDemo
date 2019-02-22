@@ -77,18 +77,17 @@ function initializePage(windowObj,initializeFunction){
 
 		myReport = renderReport(reportUri, '#report1', JRSClient);
 		
-	
-		 $button = $("#ExportButton");
-		 
-
-
+		$button = $("#ExportButton");
+		
 		myReport.events({
 			changeTotalPages: function(totalPages) {
 				console.log("Total Pages: " + totalPages);
 				maxPageIndex = totalPages;
 				$('#total').html(maxPageIndex);
 				$('#current').html(1);
-				$('#previousPage').hide();
+				//showing previous page button to maintain symmetry
+				$('#previousPage').show();
+				//$('#previousPage').hide();
 				if (1 == maxPageIndex)  {
 					$('#nextPage').hide();
 				} else {
@@ -100,30 +99,43 @@ function initializePage(windowObj,initializeFunction){
 		var ic = JRSClient.inputControls({
 				resource: reportUri,
 				success: function(data) {
-					renderStandardIC(data);
+					var customer = _.findWhere(data, {id: "customerId"});
+             
+			        _.each(customer.state.options, function (option) {
+			            $("#inputOptions").append("<option " + 
+			                (option.selected ? "selected" : "") +
+			                " value='" + option.value + "'>" +
+			                option.label +
+			                "</option>");
+			        });
+
+					//renderStandardIC(data);
 					myReportIC = data; // Store this just in case :)
 				}
 		});
-		
-	
-
 
 		/*
 		 Wire the Report to the Rendered IC
-		 */
+		*/
+		/*
 		$('#btn').click(function() {
 			// Iterate trough the IC's in the Div
 			var parameters = {};
-			$('#inputOptions').children().each(function(idx, itm) {
-				/*
-				console.log($(itm).attr('id'));
-				console.log($(itm).val());
-				*/
-				parameters[$(itm).attr('id')] = $(itm).val();
+			$('#inputOptions').children().each(function(itm) {
+				
+				console.log($(itm).attr('outterText'));
+				console.log($(itm).attr('value'));
+				if ($(itm).attr('outterText')=='---') {
+					parameters[$(itm).attr('outterText')] = '';
+				}
+				else {
+					parameters[$(itm).attr('outterText')] = $(itm).val();
+				}
 			});
+
 			// console.log(parameters);
 			myReport.params(parameters).run(); // Re run the report with the new params
-		});
+		});*/
 
 
 		/*
@@ -138,7 +150,9 @@ function initializePage(windowObj,initializeFunction){
 					.fail(function(err) { alert(err); });
 			$('#current').html(currentPageIndex);
 			if (currentPageIndex <= 1)  {
-				$('#previousPage').hide();
+				// Showing previous page button even when page<= to maintain symmetry
+				$('#previousPage').show();
+				//$('#previousPage').hide();
 			} else {
 				$('#previousPage').show();
 			}

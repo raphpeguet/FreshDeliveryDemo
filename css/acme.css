@@ -32,7 +32,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  font-family: 'Arvo';
+  font-family: 'Open Sans Bold';
 }
 body {
   background-color: #365a35;
@@ -377,7 +377,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 /*
  * Aux Col Headlines and Features
  */
-.aux-col h2.lead { color:#FEFBE8; text-transform: uppercase; font-size:12px;font-weight: normal;font-family:helvetica,arial,sans-serif;
+.aux-col h2.lead { color:#FEFBE8; text-transform: uppercase; font-size:12px;font-weight: normal;font-family:'Open Sans';
   text-shadow: 0 1px 3px rgba(0,0,0,.5); letter-spacing: 1px;text-align:center;margin-top:4px;margin-bottom:10px;}
   
 .aux-col p.lead { font-size:16px;}
@@ -396,7 +396,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 }
 .chart-header-top {
   text-align: left;
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans';
   font-size: 22px;
   font-weight: bold;
   color: #5c5d5f;
@@ -407,7 +407,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 
 .chart-header {
   text-align: left;
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans';
   font-size: 17px;
   font-weight: bold;
   color: #5c5d5f;
@@ -418,7 +418,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 
 .chart-header-top-admin {
   text-align: left;
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans';
   font-size: 17px;
   font-weight: bold;
   color: #5c5d5f;
@@ -607,7 +607,7 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 
 .shipping-header {
   text-align: left;
-  font-family: Arial, Verdana, sans-serif;
+  font-family: 'Open Sans';
   font-size: 16px;
   font-weight: bold;
   color: #5c5d5f;
@@ -644,3 +644,15 @@ h1.lead { text-transform: uppercase; font-size:40px;font-weight: 700;
 }
 
 .add-pointer { cursor: pointer; }
+
+.default_dashboard {
+  content:url('http://localhost:8080/FreshDeliveryDemo/img/default_dashboard.jpg');
+  width:100%;
+  filter: blur(0.9px);
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#DepartmentName, #CityName2{
+  font-family:'Open Sans Bold';
+}
