@@ -47,7 +47,7 @@ $ sed -i 's~localhost~my.jasperserver.com~' /var/www/html/freshdelivery/healthy-
 6. The script is hardcoded to login using jasperadmin/jasperadmin if you need to change this, do so in `/js/visualizeHelper.js`
 7. Use an Google API key to view the maps in FreshDelivery. 
 ```
-	a. Find your Google API kay at https://developers.google.com/maps/documentation/javascript/get-api-key
+	a. Find your Google API key at https://developers.google.com/maps/documentation/javascript/get-api-key
 	b. Using Jaspersoft Studio open the report /Public/Samples/FreshDelivery Demo/21.7GoGreen Map. The report is named **Main jrxml**.
 	c. In the Map properties, under the authentication tab, enter your API key
 	*Be carefull not to touch the **Version** field as there is a bug in v. 6.4 and before that will delete the Map from the JRXML without updating the report template view. You may have deleted the map without knowing it*.
